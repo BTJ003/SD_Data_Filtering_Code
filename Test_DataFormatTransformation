@@ -23,9 +23,30 @@ int main()
     printf("Enter Magnetic Bearing: ");
     scanf("%f", &DriverData.BearingDegree);
     
+    /* 
+    For GPS to make sense the longitude must be between 25 to 50 while Latitude 
+    must be between -65 and -125 for tests done in Continental US. Can be 
+    narrowed down for better filtering but for now will use these constraints.
+    Unsure how to filter for magnetic bearing, does it need to be?
+    */ 
+    
+    if(25 > DriverData.Longitude)
+        return 0; /* unsure how to make request for new data */
+    if(DriverData.Longitude > 50)
+        return 0; /* unsure how to make request for new data */ 
+    if(-125 > DriverData.Latitude)
+        return 0; /* unsure how to make request for new data */
+    if(DriverData.Latitude > -65)
+        return 0; /* unsure how to make request for new data */ 
+
+    /*I will have to research more how to convert these */
+    AIData.Longitude = DriverData.Longitude;
+    AIData.Latitude = DriverData.Latitude;
+    AIData.BearingDegree = DriverData.BearingDegree;
+
     printf("\nAll Data Provided:");
-    printf("\nLongitude: %f", DriverData.Longitude);
-    printf("\nLatitude: %f", DriverData.Latitude);
-    printf("\nMagnetic Bearing: %f", DriverData.BearingDegree);
+    printf("\nLongitude: %f", AIData.Longitude);
+    printf("\nLatitude: %f", AIData.Latitude);
+    printf("\nMagnetic Bearing: %f", AIData.BearingDegree);
     return 0;
 }
