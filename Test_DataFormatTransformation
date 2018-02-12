@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+struct DriverChipFormat
+{
+    float Longitude;
+    float Latitude;
+    float BearingDegree;
+} DriverData;
+
+struct AIChipFormat 
+{
+    float Longitude;
+    float Latitude;
+    float BearingDegree;    
+} AIData;
+
+int main()
+{
+    printf("Enter Longitude GPS data for Current Location: ");
+    scanf("%f", &DriverData.Longitude);
+    printf("Enter Latitude GPS data for Current Location: ");
+    scanf("%f", &DriverData.Latitude);
+    printf("Enter Magnetic Bearing: ");
+    scanf("%f", &DriverData.BearingDegree);
+    
+    printf("\nAll Data Provided:");
+    printf("\nLongitude: %f", DriverData.Longitude);
+    printf("\nLatitude: %f", DriverData.Latitude);
+    printf("\nMagnetic Bearing: %f", DriverData.BearingDegree);
+    return 0;
+}
