@@ -30,6 +30,8 @@ int main()
     Unsure how to filter for magnetic bearing, does it need to be?
     */ 
     
+    /* have a tolerence set for changes in speed */
+    
     if(25 > DriverData.Longitude)
         return 0; /* unsure how to make request for new data */
     if(DriverData.Longitude > 50)
