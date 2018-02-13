@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+/* Placeholder structs? */
 struct DriverChipFormat
 {
     float Longitude;
@@ -16,6 +17,7 @@ struct AIChipFormat
 
 int main()
 {
+    /* placeholder for pulling data from driver registers? */ 
     printf("Enter Longitude GPS data for Current Location: ");
     scanf("%f", &DriverData.Longitude);
     printf("Enter Latitude GPS data for Current Location: ");
@@ -46,6 +48,7 @@ int main()
     AIData.Latitude = DriverData.Latitude;
     AIData.BearingDegree = DriverData.BearingDegree;
 
+    /*placeholder for loading data into registers accessed by AI chip */
     printf("\nAll Data Provided:");
     printf("\nLongitude: %f", AIData.Longitude);
     printf("\nLatitude: %f", AIData.Latitude);
