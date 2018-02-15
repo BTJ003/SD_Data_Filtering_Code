@@ -3,27 +3,27 @@
 /* Placeholder structs? */
 struct DriverChipFormat
 {
-    float Longitude;
-    float Latitude;
-    float BearingDegree;
+    float Lng;
+    float Lat;
+    float Heading;
 } DriverData;
 
 struct AIChipFormat 
 {
-    float Longitude;
-    float Latitude;
-    float BearingDegree;    
+    float Lng;
+    float Lat;
+    float Heading;    
 } AIData;
 
 int main()
 {
     /* placeholder for pulling data from driver registers? */ 
     printf("Enter Longitude GPS data for Current Location: ");
-    scanf("%f", &DriverData.Longitude);
+    scanf("%f", &DriverData.Lng);
     printf("Enter Latitude GPS data for Current Location: ");
-    scanf("%f", &DriverData.Latitude);
+    scanf("%f", &DriverData.Lat);
     printf("Enter Magnetic Bearing: ");
-    scanf("%f", &DriverData.BearingDegree);
+    scanf("%f", &DriverData.Heading);
     
     /* 
     For GPS to make sense the longitude must be between 25 to 50 while Latitude 
@@ -34,24 +34,24 @@ int main()
     
     /* have a tolerence set for changes in speed */
     
-    if(25 > DriverData.Longitude)
+    if(25 > DriverData.Lng)
         return 0; /* unsure how to make request for new data */
-    if(DriverData.Longitude > 50)
+    if(DriverData.Lng > 50)
         return 0; /* unsure how to make request for new data */ 
-    if(-125 > DriverData.Latitude)
+    if(-125 > DriverData.Lat)
         return 0; /* unsure how to make request for new data */
-    if(DriverData.Latitude > -65)
+    if(DriverData.Lat > -65)
         return 0; /* unsure how to make request for new data */ 
 
     /*I will have to research more how to convert these */
-    AIData.Longitude = DriverData.Longitude;
-    AIData.Latitude = DriverData.Latitude;
-    AIData.BearingDegree = DriverData.BearingDegree;
+    AIData.Longitude = DriverData.Lng;
+    AIData.Latitude = DriverData.Lat;
+    AIData.BearingDegree = DriverData.Heading;
 
     /*placeholder for loading data into registers accessed by AI chip */
     printf("\nAll Data Provided:");
-    printf("\nLongitude: %f", AIData.Longitude);
-    printf("\nLatitude: %f", AIData.Latitude);
-    printf("\nMagnetic Bearing: %f", AIData.BearingDegree);
+    printf("\nLongitude: %f", AIData.Lng);
+    printf("\nLatitude: %f", AIData.Lat);
+    printf("\nMagnetic Bearing: %f", AIData.Heading);
     return 0;
 }
