@@ -27,8 +27,12 @@ DriverRudder transformRudderToDriver(AIRudder in){
 		return 0; // Send call for new data from AI
 	
 	//Make transformations
-	unsigned short interlude = float truncf(AIRudder.RudderDegree);
-	DriverRudder.RudderDegree = (interlude*10)+2000;
+	//unsigned short interlude = float truncf(AIRudder.RudderDegree);
+	//DriverRudder.RudderDegree = (interlude*10)+2000;
+	
+	float interlude = (AIRudder.RudderDegree*10)+2000;
+	DriverRudder.RudderDegree = float truncf(interlude);
+
 	return out;
 }
 
