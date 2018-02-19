@@ -44,9 +44,9 @@ int main()
         return 0; /* unsure how to make request for new data */ 
 
     /*I will have to research more how to convert these */
-    AIData.Longitude = DriverData.Lng;
-    AIData.Latitude = DriverData.Lat;
-    AIData.BearingDegree = DriverData.Heading;
+    AIData.Lng = DriverData.Lng;
+    AIData.Lat = DriverData.Lat;
+    AIData.Heading = DriverData.Heading;
 
     /*placeholder for loading data into registers accessed by AI chip */
     printf("\nAll Data Provided:");
