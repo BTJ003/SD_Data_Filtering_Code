@@ -22,7 +22,7 @@ typedef struct AIRudder
 
 typedef struct DriverRudder
 {
-	float RudderDegree  /* unsure if this is the proper form */
+	unsigned short RudderDegree  
 } DriverRudder;
 
 #endif STRUCTS_H
