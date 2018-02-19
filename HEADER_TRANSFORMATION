@@ -23,6 +23,6 @@ struct RudderAIForm
 struct RudderDriverForm
 {
   float RudderDegree  /* unsure if this is the proper form */
-}
+} DriverRudder;
 
 #endif HEADERTRANSFORM_H
