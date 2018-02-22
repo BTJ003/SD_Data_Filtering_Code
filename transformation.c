@@ -2,17 +2,26 @@
 
 AIData transformDataToAI(DriverData in){
 	AIData out;
+	out.valid = true;
+	
 	//Check for validity
-	if(25 > DriverData.Lng)
-        	return 0; // unsure how to make request for new data 
-	if(DriverData.Lng > 50)
-        	return 0; // unsure how to make request for new data  
-	if(-125 > DriverData.Lat)
-        	return 0; // unsure how to make request for new data 
-	if(DriverData.Lat > -65)
-        	return 0; // unsure how to make request for new data
-
+	if(25 > in.lng){
+        	out.valid = false;
+			return out;
+	}else if(in.lng > 50){
+        	out.valid = false;
+			return out;
+	}if(-125 > in.lat){
+        	out.valid = false;
+			return out;
+	}else if(in.lat > -65){
+        	out.valid = false;
+			return out;
+	}
 	//Make transformations ex. out.Lng = in.Lng + 1.265;
+	out.lat = in.lat;
+	out.lng = in.lng;
+	out.heading = in.heading;
 	return out;
 }
 
@@ -20,18 +29,21 @@ AIData transformDataToAI(DriverData in){
 
 DriverRudder transformRudderToDriver(AIRudder in){
 	DriverRudder out;
+	out.valid = true;
+	
 	// Check Validity
-	if(AIRudder.RudderDegree > 100)
-		return 0; // Send call for new data from AI
-	if(AIRudder.RudderDegree < -100)
-		return 0; // Send call for new data from AI
+	if(in.rudderDegree > 100){
+		out.valid = false;
+		return out;
+	}else if(in.rudderDegree < -100){
+		out.valid = false;
+		return out;
+	}
 	
 	//Make transformations
-	//unsigned short interlude = float truncf(AIRudder.RudderDegree);
-	//DriverRudder.RudderDegree = (interlude*10)+3000;
 	
-	float interlude = (AIRudder.RudderDegree*15.62)+4687;
-	DriverRudder.RudderDegree = float truncf(interlude);
+	float interlude = (in.rudderDegree*15.625)+4687.5;
+	out.rudderDegree = truncf(interlude);
 
 	return out;
 }

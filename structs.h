@@ -1,28 +1,34 @@
 #ifndef STRUCTS_H
 #define STRUCTS_H
 
+#include <stdbool.h>
+
 typedef struct DriverData
 {
-	float Lng;
-	float Lat;
-	float Heading;
+	float lng;
+	float lat;
+	float heading;
+	bool valid;
 } DriverData;
 
 typedef struct AIData
 {
-	float Lng;
-	float Lat;
-	float Heading;
+	float lng;
+	float lat;
+	float heading;
+	bool valid;
 } AIData;
 
 typedef struct AIRudder
 {
-	float RudderDegree
+	float rudderDegree;
+	bool valid;
 } AIRudder;
 
 typedef struct DriverRudder
 {
-	unsigned short RudderDegree  
+	unsigned short rudderDegree; 
+	bool valid;
 } DriverRudder;
 
-#endif STRUCTS_H
+#endif
