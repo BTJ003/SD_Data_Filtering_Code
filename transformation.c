@@ -1,5 +1,8 @@
 #include "transformation.h"
 
+//Set SWITCH_LEFT_RIGHT to a value other than 0 to invert the left-right rudder values
+#define SWITCH_LEFT_RIGHT 0
+
 AIData transformDataToAI(DriverData in){
 	AIData out;
 	out.valid = true;
@@ -41,6 +44,10 @@ DriverRudder transformRudderToDriver(AIRudder in){
 	}
 	
 	//Make transformations
+	
+	#if SWITCH_LEFT_RIGHT
+	in.rudderDegree *= -1;
+	#endif
 	
 	float interlude = (in.rudderDegree*15.625)+4687.5;
 	out.rudderDegree = truncf(interlude);
