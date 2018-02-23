@@ -8,16 +8,16 @@ AIData transformDataToAI(DriverData in){
 	out.valid = true;
 	
 	//Check for validity
-	if(36.1315 > in.lng){
+	if(36.0 > in.lng){
         	out.valid = false;
 			return out;
-	}else if(in.lng > 36.1432){
+	}else if(in.lng > 36.2){
         	out.valid = false;
 			return out;
-	}if(-94.1330 > in.lat){
+	}if(-94.0 > in.lat){
         	out.valid = false;
 			return out;
-	}else if(in.lat > -94.1183){
+	}else if(in.lat > -94.35){
         	out.valid = false;
 			return out;
 	}
