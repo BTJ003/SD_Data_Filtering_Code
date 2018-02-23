@@ -21,9 +21,12 @@ AIData transformDataToAI(DriverData in){
         	out.valid = false;
 			return out;
 	}
-	//Make transformations ex. out.Lng = in.Lng + 1.265;
+	// transformations
+	// interlat =
 	out.lat = in.lat;
+	// interlng = 
 	out.lng = in.lng;
+	// interheading = 
 	out.heading = in.heading;
 	return out;
 }
