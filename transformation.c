@@ -58,3 +58,13 @@ DriverRudder transformRudderToDriver(AIRudder in){
 	return out;
 }
 
+AIDestination transformDestinationtoAI(DriverDestination in){
+	AIDestination out;
+	out.valid = true;
+	
+	//Check Validity
+	
+	//Transformation here
+	
+	return out;
+}

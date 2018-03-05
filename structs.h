@@ -31,14 +31,16 @@ typedef struct DriverRudder
 	bool valid;
 } DriverRudder;
 
-typedef struct DriverGPSDestination
+typedef struct DriverDestination
 {
 	float gpsTarget;
 	bool valid;
-}
-typedef struct AIGPSDestination
+} DriverDestination;
+
+typedef struct AIDestination
 {
 	float gpsTarget;
 	bool valid;
-}
+} AIDestination;
+
 #endif

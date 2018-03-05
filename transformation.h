@@ -6,5 +6,6 @@
 
 AIData transformDataToAI(DriverData in);
 DriverRudder transformRudderToDriver(AIRudder in);
+AIDestination transformDestinationtoAI(DriverDestination in);
 
 #endif
