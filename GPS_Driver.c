@@ -137,13 +137,18 @@ BOOL gps_parse(char *nmea) {
       else return false;
     }	
     return true;
-  }
-
+  } 
+  
+  DriverData.lng = longitudeDegrees;
+  DriverData.lat = latitudeDegrees;
+  
+/* unsure what this section is for currently
   if (locationUpdate){
       //means that location was updated
       gps_event(latitude, longitude);
       //THIS IS A LITTLE SKETCHY TO ME...LONG AND LAT ARE NEVER DEFINED WITHIN
       //THIS FUNCTION, THEY ARE JUST USED.
   }
+  */
   return false;
 }//ends parse
