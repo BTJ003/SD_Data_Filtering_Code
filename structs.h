@@ -2,11 +2,12 @@
 #define STRUCTS_H
 
 #include <stdbool.h>
+#include <stdint.h>
 
 typedef struct DriverData
 {
-	float lng;
-	float lat;
+	UINT32 lng;
+	UINT32 lat;
 	float heading;
 	bool valid;
 } DriverData;
