@@ -1,6 +1,8 @@
 #include "structs.h"
 #include "transformation.h"
 
+#include <stdio.h>
+#include <stlid.h>
 //gps gps_struct;
 
 const CHAR * PMTK_STANDBY = "s";

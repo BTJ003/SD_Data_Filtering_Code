@@ -6,8 +6,8 @@
 
 typedef struct DriverData
 {
-	UINT32 lng;
-	UINT32 lat;
+	int lng;
+	int lat;
 	float heading;
 	bool valid;
 } DriverData;
