@@ -65,10 +65,10 @@ AIDestination transformDestinationtoAI(DriverDestination in){
 	//Check Validity
 	
 	//Transformation here
-	int latPlaceholder = in.lat;
-	out.lat = in.lat;
-	int lonPlaceholder = in.lon;
-	out.lat = in.lon;
+	float latPlaceholder = in.lat;
+	out.lat = latPlaceholder;
+	float lonPlaceholder = in.lng;
+	out.lng = lngPlaceholder;
 	
 	return out;
 }
