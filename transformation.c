@@ -22,10 +22,10 @@ AIData transformDataToAI(DriverData in){
 			return out;
 	}
 	// transformations
-	// interlat =
-	out.lat = in.lat;
-	// interlng = 
-	out.lng = in.lng;
+	float latPlaceholder = in.lat;
+	out.lat = latPlaceholder;
+	float lngPlaceholder = in.lng;
+	out.lng = lngPlaceholder;
 	// interheading = 
 	out.heading = in.heading;
 	return out;
