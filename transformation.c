@@ -26,7 +26,7 @@ AIData transformDataToAI(DriverData in){
 	out.lat = latPlaceholder;
 	float lngPlaceholder = in.lng;
 	out.lng = lngPlaceholder;
-	// interheading = 
+	// interheading =              //Want it in float -180 to 180
 	out.heading = in.heading;
 	return out;
 }
