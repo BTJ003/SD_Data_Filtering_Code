@@ -58,17 +58,17 @@ DriverRudder transformRudderToDriver(AIRudder in){
 	return out;
 }
 
-AIDestination transformDestinationtoAI(DriverDestination in){
-	AIDestination out;
-	out.valid = true;
-	
-	//Check Validity
-	
-	//Transformation here
-	float latPlaceholder = in.lat;
-	out.lat = latPlaceholder;
-	float lonPlaceholder = in.lng;
-	out.lng = lngPlaceholder;
-	
-	return out;
+//AIDestination transformDestinationtoAI(DriverDestination in){
+//	AIDestination out;
+//	out.valid = true;
+//	
+//	//Check Validity
+//	
+//	//Transformation here
+//	float latPlaceholder = in.lat;
+//	out.lat = latPlaceholder;
+//	float lonPlaceholder = in.lng;
+//	out.lng = lngPlaceholder;
+//	
+//	return out;
 }
