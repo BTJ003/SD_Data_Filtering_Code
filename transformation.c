@@ -31,8 +31,6 @@ AIData transformDataToAI(DriverData in){
 	return out;
 }
 
-
-
 DriverRudder transformRudderToDriver(AIRudder in){
 	DriverRudder out;
 	out.valid = true;
