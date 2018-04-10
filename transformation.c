@@ -52,7 +52,7 @@ DriverRudder transformRudderToDriver(AIRudder in){
 	in.rudderDegree *= -1;
 	#endif
 	
-	float interlude = (in.rudderDegree*62.50)+18750;
+	float interlude = (in.rudderDegree*1000)+3000;
 	out.rudderDegree = truncf(interlude);
 
 	return out;
